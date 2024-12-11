@@ -1,5 +1,7 @@
 package HomeWork.HomeWork1208;
 
+import java.util.Random;
+
 public class Task120811 {
 
     /**
@@ -35,8 +37,11 @@ public class Task120811 {
     public static void drawPrize(int[] prizes) {
         int[] brr = new int[prizes.length];
         int index = 0;
+        // 创建随机数对象
+        Random rd = new Random();
         while (index < prizes.length) {
-            int i = (int) (Math.random() * prizes.length);
+            int i = rd.nextInt(prizes.length);
+            // int i = (int) (Math.random() * prizes.length);
             if (!isContains(brr, prizes[i])) {
                 System.out.println(prizes[i] + "元的奖金被抽出");
                 brr[index] = prizes[i];
