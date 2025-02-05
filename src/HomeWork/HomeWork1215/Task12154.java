@@ -23,6 +23,7 @@ package HomeWork.HomeWork1215;
 public class Task12154 {
     public static void main(String[] args) {
         Student[] students = new Student[3];
+        addStudent(students, new Student(1, "张三", 20));
 
         // 添加的时候需要进行学号的唯一性判断。
         addStudent(students, new Student(1, "张三", 20));
